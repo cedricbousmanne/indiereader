@@ -1,1 +1,9 @@
 <h3>Welcome</h3>
+<form action="https://indielogin.com/auth" method="get">
+  <label for="url">Web Address:</label>
+  <input id="url" type="text" name="me" placeholder="yourdomain.com" />
+  <p><button type="submit">Sign In</button></p>
+  <input type="hidden" name="client_id" value="http://localhost:3000/" />
+  <input type="hidden" name="redirect_uri" value="http://localhost:3000/users/redirect" />
+  <input type="hidden" name="state" value="jwiusuerujs" />
+</form>

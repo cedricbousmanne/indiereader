@@ -10,6 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_09_24_114144) do
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "last_state_string"
+    t.string "token"
+    t.index ["last_state_string"], name: "index_users_on_last_state_string", unique: true
+  end
 
 end

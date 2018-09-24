@@ -1,10 +1,41 @@
--# navigation styled for Bootstrap 3.0
-.container
-  %nav.navbar.navbar-dark.bg-inverse
-    %ul.nav.navbar-nav.clearfix
+%nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+  %a.navbar-brand.mr-auto.mr-lg-0{:href => "#"} IndieReader
+  %button.navbar-toggler.p-0.border-0{"data-toggle" => "offcanvas", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        %a.nav-link{:href => "#"}
+          Dashboard
+          %span.sr-only (current)
       %li.nav-item
-        %button.navbar-toggler.hidden-sm-up.nav-link{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
-          \ &#9776;
-    #exCollapsingNavbar2.collapse.navbar-toggleable-xs
-      = link_to "Rails bootstrap", root_path, class: 'navbar-brand'
-      %ul.nav.navbar-nav= render 'layouts/navigation_links'
+        %a.nav-link{:href => "#"} Notifications
+      %li.nav-item
+        %a.nav-link{:href => "#"} Profile
+      %li.nav-item
+        %a.nav-link{:href => "#"} Switch account
+      %li.nav-item.dropdown
+        %a#dropdown01.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "https://example.com"} Settings
+        .dropdown-menu{"aria-labelledby" => "dropdown01"}
+          %a.dropdown-item{:href => "#"} Action
+          %a.dropdown-item{:href => "#"} Another action
+          %a.dropdown-item{:href => "#"} Something else here
+    %ul.navbar-nav.my-2.my-lg-0
+      %li.nav-item.active
+        = link_to "Sign out", session_path, { :method => :delete, class: 'nav-link' }
+    / %form.form-inline.my-2.my-lg-0
+    /   %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "text"}/
+    /   %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+.nav-scroller.bg-white.shadow-sm
+  %nav.nav.nav-underline
+    %a.nav-link.active{:href => "#"} Dashboard
+    %a.nav-link{:href => "#"}
+      Friends
+      %span.badge.badge-pill.bg-light.align-text-bottom 27
+    %a.nav-link{:href => "#"} Explore
+    %a.nav-link{:href => "#"} Suggestions
+    %a.nav-link{:href => "#"} Link
+    %a.nav-link{:href => "#"} Link
+    %a.nav-link{:href => "#"} Link
+    %a.nav-link{:href => "#"} Link
+    %a.nav-link{:href => "#"} Link
