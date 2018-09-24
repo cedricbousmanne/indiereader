@@ -28,6 +28,9 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 
 Getting Started
 ---------------
+bundle
+rails db:setup
+rails db:migrate
 
 Documentation and Support
 -------------------------
